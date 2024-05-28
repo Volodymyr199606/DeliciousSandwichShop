@@ -1,4 +1,7 @@
 package com.pluralsight;
+import com.pluralsight.Models.Order;
+import com.pluralsight.Models.Sandwich;
+
 import java.util.Scanner;
 
 public class Main {

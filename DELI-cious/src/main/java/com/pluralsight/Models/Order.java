@@ -1,4 +1,6 @@
-package com.pluralsight;
+package com.pluralsight.Models;
+import com.pluralsight.Receipt;
+
 import java.util.*;
 
 public class Order {

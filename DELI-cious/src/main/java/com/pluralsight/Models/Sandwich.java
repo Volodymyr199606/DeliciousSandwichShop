@@ -1,4 +1,6 @@
-package com.pluralsight;
+package com.pluralsight.Models;
+import com.pluralsight.PriceList;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
