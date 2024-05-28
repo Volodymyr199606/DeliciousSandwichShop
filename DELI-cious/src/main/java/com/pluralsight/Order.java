@@ -1,51 +1,90 @@
 package com.pluralsight;
-
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Order {
     private List<Sandwich> sandwiches;
     private List<String> drinks;
-    private int chips;
+    private Map<String, Integer> chips;
     private double totalCost;
+    private List<String> items = new ArrayList<>();
+    private String cashierName;
+
+
+
 
     public Order() {
         this.sandwiches = new ArrayList<>();
         this.drinks = new ArrayList<>();
-        this.chips = 0;
+        this.chips = new HashMap<>();
+        this.cashierName = generateRandomCashierName();
+
     }
 
-    public List<Sandwich> getSandwiches() {
-        return sandwiches;
-    }
+
+
 
     public void addSandwich(Sandwich sandwich) {
         this.sandwiches.add(sandwich);
+        items.add("Sandwich: " + sandwich.toString());
+        items.add(sandwich.toString());
+
+    }
+
+    public void addDrink(String drink) {
+        this.drinks.add(drink);
+        this.totalCost += 2.0;
+        items.add("Drink: " + drink);// assuming a fixed cost for drinks
+    }
+
+    public void addChips(String chips) {
+        this.chips.put(chips, 1);
+    }
+
+
+    public void calculateTotalCost() {
+        for (Sandwich sandwich : sandwiches) {
+            this.totalCost += sandwich.calculateCost();
+        }
+    }
+
+    public void generateReceipt() {
+        Receipt receipt = new Receipt(this);
+        receipt.generateReceipt();
+    }
+
+
+    // existing getters and setters...
+
+    public List<Sandwich> getSandwiches() {
+        return sandwiches;
     }
 
     public List<String> getDrinks() {
         return drinks;
     }
 
-    public void addDrink(String drink) {
-        this.drinks.add(drink);
-    }
-
-    public int getChips() {
+    public Map<String, Integer> getChips() {
         return chips;
     }
 
-    public void addChips(int chips) {
-        this.chips += chips;
-    }
-
     public double getTotalCost() {
-        // Calculate the total cost based on the sandwiches, drinks, and chips in the order
-        // This will need to be updated as you add more functionality to the Sandwich and Topping classes
         return totalCost;
     }
 
-    public void setTotalCost(double totalCost) {
-        this.totalCost = totalCost;
+    public List<String> getItems() {
+        return items;
     }
+
+    public String getCashierName() {
+        return cashierName;
+    }
+
+    private String generateRandomCashierName() {
+        String[] names = {"John", "Jane", "Bob", "Alice", "Charlie", "Diana"};
+        Random random = new Random();
+        return names[random.nextInt(names.length)];
+    }
+
+
+
 }
