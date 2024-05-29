@@ -9,7 +9,9 @@ public class Drink extends Product {
         this.size = size;
     }
 
-
+    public String getSize() {
+        return size;
+    }
 
     private static double calculatePrice(String size) {
         switch (size) {

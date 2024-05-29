@@ -1,4 +1,5 @@
 package com.pluralsight.UI;
+
 import com.pluralsight.Models.Chips;
 import com.pluralsight.Models.Drink;
 import com.pluralsight.Models.Order;
@@ -11,11 +12,8 @@ import com.pluralsight.Models.BLT;
 import com.pluralsight.Models.PhillyCheeseSteak;
 import com.pluralsight.Models.Sauce;
 
-
-
 import java.io.IOException;
 import java.util.Scanner;
-
 
 
 public class Main {

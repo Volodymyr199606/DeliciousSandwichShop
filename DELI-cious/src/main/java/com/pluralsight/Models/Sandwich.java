@@ -35,6 +35,27 @@ public class Sandwich extends Product {
         this.toasted = toasted;
     }
 
+
+    public List<RegularTopping> getRegularToppings() {
+        return regularToppings;
+    }
+
+    public List<PremiumTopping> getPremiumToppings() {
+        return premiumToppings;
+    }
+
+    public List<Sauce> getSauces() {
+        return sauces;
+    }
+
+    public boolean isToasted() {
+        return toasted;
+    }
+
+    public String getBreadType() {
+        return breadType;
+    }
+
     public Size getSize() {
         return size;
     }
@@ -81,4 +102,6 @@ public class Sandwich extends Product {
         description.append(", Toasted: ").append(toasted ? "Yes" : "No");
         return description.toString();
     }
+
+
 }
