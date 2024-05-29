@@ -1,5 +1,9 @@
 package com.pluralsight.Models;
 
-public class Chips
-{
+// Chips.java
+
+public class Chips extends Product {
+    public Chips() {
+
+    }
 }

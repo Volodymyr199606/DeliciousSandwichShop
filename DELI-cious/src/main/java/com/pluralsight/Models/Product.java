@@ -1,5 +1,9 @@
 package com.pluralsight.Models;
 
-public class Topping {
+
+
+public abstract class Product
+{
+
 
 }

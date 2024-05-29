@@ -1,5 +1,6 @@
 package com.pluralsight.Models;
 
-public class Topping {
+
+public class Size {
 
 }
