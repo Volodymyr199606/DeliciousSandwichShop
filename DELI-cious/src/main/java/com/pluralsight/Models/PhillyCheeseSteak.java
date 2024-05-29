@@ -2,6 +2,15 @@ package com.pluralsight.Models;
 
 public class PhillyCheeseSteak extends Sandwich {
     public PhillyCheeseSteak() {
+        super(new Size(8, 7.00), "White"); // Default size and price for the signature sandwich
+        addPremiumTopping(new PremiumTopping("Steak", false));
+        addPremiumTopping(new PremiumTopping("American", false));
+        addRegularTopping(new RegularTopping("Peppers"));
+        setToasted(true); // Assume Philly Cheese Steak is toasted by default
+    }
 
+    @Override
+    public String getDescription() {
+        return "Philly Cheese Steak Sandwich: " + super.getDescription() + ", Mayo";
     }
 }
