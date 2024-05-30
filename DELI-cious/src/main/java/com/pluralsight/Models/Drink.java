@@ -28,8 +28,10 @@ public class Drink extends Product {
 
     @Override
     public String getDescription() {
-        return "Size: " + size;
+        return size;
     }
 
-
+    public double getPrice() {
+        return price;
+    }
 }

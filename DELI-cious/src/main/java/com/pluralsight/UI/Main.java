@@ -11,6 +11,7 @@ import com.pluralsight.Models.RegularTopping;
 import com.pluralsight.Models.BLT;
 import com.pluralsight.Models.PhillyCheeseSteak;
 import com.pluralsight.Models.Sauce;
+import com.pluralsight.Models.Side;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -56,7 +57,7 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    order.addProduct(createSandwich());
+                    order.addProduct(createSandwich(order));
                     break;
                 case 2:
                     order.addProduct(createDrink());
@@ -80,7 +81,7 @@ public class Main {
 
 
 
-    private static Sandwich createSandwich() {
+    private static Sandwich createSandwich(Order order) {
         System.out.println("\nSelect Sandwich Type:");
         System.out.println("1) Custom Sandwich");
         System.out.println("2) BLT");
@@ -93,9 +94,12 @@ public class Main {
                 Size size = getSizeChoice();
                 String breadType = getBreadChoice();
                 sandwich = new Sandwich(size, breadType);
-                addToppings(sandwich);
-                boolean toasted = getYesNoInput("Toasted? (yes/no)");
+                addToppings(sandwich,order);
+                boolean toasted = getYesNoInput("Do you want Toasted? (yes/no)");
                 sandwich.setToasted(toasted);
+
+
+
                 break;
             case 2:
                 sandwich = new BLT();
@@ -108,6 +112,11 @@ public class Main {
         }
         return sandwich;
     }
+
+
+
+
+
 
     private static Size getSizeChoice() {
         System.out.println("\nSelect Size:");
@@ -139,14 +148,15 @@ public class Main {
         };
     }
 
-    private static void addToppings(Sandwich sandwich) {
+    private static void addToppings(Sandwich sandwich, Order order) {
         boolean addingToppings = true;
         while (addingToppings) {
             System.out.println("\nAdd Toppings:");
             System.out.println("1) Regular Toppings");
             System.out.println("2) Premium Toppings");
             System.out.println("3) Sauces");
-            System.out.println("0) Done");
+            System.out.println("4) Sides");
+            System.out.println("0) Done Adding Toppings");
 
             int toppingChoice = getIntInput("Enter your choice:");
 
@@ -160,6 +170,9 @@ public class Main {
                 case 3:
                     addSauce(sandwich);
                     break;
+                case 4:
+                    addSides(order);
+                    break;
                 case 0:
                     addingToppings = false;
                     break;
@@ -168,6 +181,29 @@ public class Main {
             }
         }
     }
+
+    private static void addSides(Order order) {
+        System.out.println("\nSelect Side:");
+        System.out.println("1) Au Jus");
+        System.out.println("2) Sauce");
+
+        int sideChoice = getIntInput("Enter your choice:");
+        String side = getSideDescription(sideChoice);
+
+        order.addSide(side);
+    }
+
+
+
+    private static String getSideDescription(int sideChoice) {
+        return switch (sideChoice) {
+            case 1 -> "aujus";
+            case 2 -> "sauce";
+            default -> throw new IllegalArgumentException("Invalid choice");
+        };
+    }
+
+
 
 
     private static void addSauce(Sandwich sandwich) {

@@ -9,6 +9,9 @@ public class Sandwich extends Product {
     private List<RegularTopping> regularToppings = new ArrayList<>();
     private List<PremiumTopping> premiumToppings = new ArrayList<>();
     private List<Sauce> sauces = new ArrayList<>();
+    private List<Side> sides = new ArrayList<>();
+
+
     private boolean toasted;
 
     public Sandwich(Size size, String breadType) {
@@ -19,6 +22,14 @@ public class Sandwich extends Product {
 
     public void addSauce(Sauce sauce) {
         sauces.add(sauce);
+    }
+
+    public void addSide(Side side) {
+        sides.add(side);
+    }
+
+    public List<Side> getSides() {
+        return sides;
     }
 
 
@@ -92,6 +103,15 @@ public class Sandwich extends Product {
             description.append(", Sauces: ");
             for (Sauce sauce : sauces) {
                 description.append(sauce.getName()).append(", ");
+            }
+            // Remove the trailing comma and space
+            description.setLength(description.length() - 2);
+        }
+
+        if (!sides.isEmpty()) {
+            description.append(", Sides: ");
+            for (Side side : sides) {
+                description.append(side.getDescription()).append(", ");
             }
             // Remove the trailing comma and space
             description.setLength(description.length() - 2);
