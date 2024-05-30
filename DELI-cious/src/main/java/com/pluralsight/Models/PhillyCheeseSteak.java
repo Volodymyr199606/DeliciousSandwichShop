@@ -6,6 +6,7 @@ public class PhillyCheeseSteak extends Sandwich {
         addPremiumTopping(new PremiumTopping("Steak", false));
         addPremiumTopping(new PremiumTopping("American", false));
         addRegularTopping(new RegularTopping("Peppers"));
+        addSauce(new Sauce("Mayo"));
         setToasted(true); // Assume Philly Cheese Steak is toasted by default
     }
 

@@ -8,6 +8,7 @@ public class BLT extends Sandwich {
         addPremiumTopping(new PremiumTopping("Cheddar", false));
         addRegularTopping(new RegularTopping("Lettuce"));
         addRegularTopping(new RegularTopping("Tomato"));
+        addSauce(new Sauce("Ranch"));
         setToasted(true); // Assume BLT is toasted by default
     }
 

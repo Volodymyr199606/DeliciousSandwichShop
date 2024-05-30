@@ -25,13 +25,42 @@ public class Main {
 
     private static Scanner scanner = new Scanner(System.in);
 
+
+
     public static void main(String[] args) {
+
+        int terminalWidth = 220;
+        String ANSI_RESET = "\u001B[0m";
+        String ANSI_RED = "\u001B[31m";
+        String ANSI_CYAN = "\u001B[36m";
+        String ANSI_YELLOW = "\u001B[33m";
+        String ANSI_GREEN = "\u001B[32m";
+        String ANSI_PURPLE = "\u001B[35m";
+        String ANSI_WHITE = "\u001B[37m";
+        String ANSI_LIGHT_BLUE = "\u001B[38;5;39m";
+        String ANSI_LIGHT_GREEN = "\u001B[38;5;77m";
+        String ANSI_LIGHT_YELLOW = "\u001B[38;5;226m";
+        String ANSI_LIGHT_RED = "\u001B[38;5;196m";
+        String ANSI_LIGHT_PURPLE = "\u001B[38;5;129m";
+        String ANSI_LIGHT_BROWN = "\u001B[38;5;130m";
+        String ANSI_LIGHT_CYAN = "\u001B[38;5;45m";
+        String ANSI_LIGHT_GRAY = "\u001B[38;5;250m";
+        String ANSI_LIGHT_ORANGE = "\u001B[38;5;208m";
+        String ANSI_LIGHT_PINK = "\u001B[38;5;198m";
+
+
         while (true) {
             System.out.println();
-            System.out.println("Home Screen:");
-            System.out.println("1) New Order");
-            System.out.println("0) Exit");
-            int choice = getIntInput("Enter your choice:");
+            System.out.println();
+            System.out.println(String.format("%" + (terminalWidth +  "WELCOME TO THE SANDWICH SHOP!".length()) / 2 + "s", ANSI_CYAN + "WELCOME TO THE SANDWICH SHOP!" +ANSI_RESET));
+            System.out.println();
+            System.out.println();
+            System.out.println(String.format("%" + (terminalWidth + "Home Screen:".length()) / 2 + "s", ANSI_YELLOW + "HOME SCREEN" + ANSI_RESET));
+            System.out.println();
+            System.out.println();
+            System.out.println(ANSI_GREEN + "1) New Order"+ ANSI_RESET);
+            System.out.println(ANSI_LIGHT_ORANGE + "0) Exit" + ANSI_RESET);
+            int choice = getIntInput(ANSI_LIGHT_BLUE+ "Enter your choice:" + ANSI_RESET);
 
             if (choice == 1) {
                 createNewOrder();
@@ -42,18 +71,38 @@ public class Main {
     }
 
     private static void createNewOrder() {
+        int terminalWidth = 222;
+        String ANSI_RESET = "\u001B[0m";
+        String ANSI_RED = "\u001B[31m";
+        String ANSI_CYAN = "\u001B[36m";
+        String ANSI_YELLOW = "\u001B[33m";
+        String ANSI_GREEN = "\u001B[32m";
+        String ANSI_PURPLE = "\u001B[35m";
+        String ANSI_WHITE = "\u001B[37m";
+        String ANSI_LIGHT_BLUE = "\u001B[38;5;39m";
+        String ANSI_LIGHT_GREEN = "\u001B[38;5;77m";
+        String ANSI_LIGHT_YELLOW = "\u001B[38;5;226m";
+        String ANSI_LIGHT_RED = "\u001B[38;5;196m";
+        String ANSI_LIGHT_PURPLE = "\u001B[38;5;129m";
+        String ANSI_LIGHT_BROWN = "\u001B[38;5;130m";
+        String ANSI_LIGHT_CYAN = "\u001B[38;5;45m";
+        String ANSI_LIGHT_ORANGE = "\u001B[38;5;208m";
+
+
         Order order = new Order();
         boolean ordering = true;
 
         while (ordering) {
-            System.out.println("\nOrder Screen:");
-            System.out.println("1) Add Sandwich");
-            System.out.println("2) Add Drink");
-            System.out.println("3) Add Chips");
-            System.out.println("4) Checkout");
-            System.out.println("0) Cancel Order");
+            System.out.println(String.format("%" + (terminalWidth + "ORDER SCREEN".length()) / 2 + "s", ANSI_GREEN + "ORDER SCREEN" + ANSI_RESET));
+            System.out.println();
+            System.out.println();
+            System.out.println(ANSI_LIGHT_ORANGE+ "1) Add Sandwich" + ANSI_RESET);
+            System.out.println(ANSI_LIGHT_BLUE + "2) Add Drink" + ANSI_RESET);
+            System.out.println(ANSI_LIGHT_YELLOW  + "3) Add Chips" + ANSI_RESET);
+            System.out.println(ANSI_CYAN + "4) Checkout" + ANSI_RESET);
+            System.out.println(ANSI_RED + "0) Cancel Order" + ANSI_RESET);
 
-            int choice = getIntInput("Enter your choice:");
+            int choice = getIntInput(ANSI_LIGHT_BLUE + "Enter your choice:" + ANSI_RESET);
 
             switch (choice) {
                 case 1:
@@ -82,12 +131,21 @@ public class Main {
 
 
     private static Sandwich createSandwich(Order order) {
-        System.out.println("\nSelect Sandwich Type:");
-        System.out.println("1) Custom Sandwich");
-        System.out.println("2) BLT");
-        System.out.println("3) Philly Cheese Steak");
 
-        int sandwichChoice = getIntInput("Enter your choice:");
+        String ANSI_RESET = "\u001B[0m";
+        String ANSI_YELLOW = "\u001B[33m";
+        String ANSI_GREEN = "\u001B[32m";
+        String ANSI_LIGHT_BLUE = "\u001B[38;5;39m";
+        String ANSI_LIGHT_YELLOW = "\u001B[38;5;226m";
+        String ANSI_LIGHT_ORANGE = "\u001B[38;5;208m";
+
+
+        System.out.println(ANSI_LIGHT_ORANGE+ "\nSelect Sandwich Type:" + ANSI_RESET);
+        System.out.println(ANSI_LIGHT_BLUE + "1) Custom Sandwich" + ANSI_RESET);
+        System.out.println(ANSI_LIGHT_YELLOW + "2) BLT" + ANSI_RESET);
+        System.out.println(ANSI_YELLOW + "3) Philly Cheese Steak" + ANSI_RESET);
+
+        int sandwichChoice = getIntInput(ANSI_GREEN +"Enter your choice:" + ANSI_RESET);
         Sandwich sandwich;
         switch (sandwichChoice) {
             case 1:
@@ -119,12 +177,22 @@ public class Main {
 
 
     private static Size getSizeChoice() {
-        System.out.println("\nSelect Size:");
-        System.out.println("1) 4\" ($5.50)");
-        System.out.println("2) 8\" ($7.00)");
-        System.out.println("3) 12\" ($8.50)");
 
-        int sizeChoice = getIntInput("Enter your choice:");
+        String ANSI_RESET = "\u001B[0m";
+        String ANSI_YELLOW = "\u001B[33m";
+        String ANSI_GREEN = "\u001B[32m";
+        String ANSI_LIGHT_BLUE = "\u001B[38;5;39m";
+        String ANSI_LIGHT_YELLOW = "\u001B[38;5;226m";
+        String ANSI_LIGHT_ORANGE = "\u001B[38;5;208m";
+
+
+
+        System.out.println(ANSI_LIGHT_YELLOW + "\nSelect Size:" + ANSI_RESET);
+        System.out.println(ANSI_GREEN + "1) 4\" ($5.50)" + ANSI_RESET);
+        System.out.println(ANSI_GREEN + "2) 8\" ($7.00)" + ANSI_RESET);
+        System.out.println(ANSI_GREEN + "3) 12\" ($8.50)" + ANSI_RESET);
+
+        int sizeChoice = getIntInput(ANSI_LIGHT_BLUE +"Enter your choice:" + ANSI_RESET);
         return switch (sizeChoice) {
             case 1 -> new Size(4, PRICE_4_INCH);
             case 2 -> new Size(8, PRICE_8_INCH);
@@ -134,12 +202,22 @@ public class Main {
     }
 
     private static String getBreadChoice() {
-        System.out.println("\nSelect Bread Type:");
-        System.out.println("1) Wheat");
-        System.out.println("2) White");
-        System.out.println("3) Rye");
+        String ANSI_RESET = "\u001B[0m";
+        String ANSI_YELLOW = "\u001B[33m";
+        String ANSI_GREEN = "\u001B[32m";
+        String ANSI_LIGHT_BLUE = "\u001B[38;5;39m";
+        String ANSI_LIGHT_YELLOW = "\u001B[38;5;226m";
+        String ANSI_LIGHT_ORANGE = "\u001B[38;5;208m";
+        String ANSI_CYAN = "\u001B[36m";
+        String ANSI_LIGHT_BROWN = "\u001B[38;5;130m";
 
-        int breadChoice = getIntInput("Enter your choice:");
+
+        System.out.println(ANSI_CYAN + "\nSelect Bread Type:" + ANSI_RESET);
+        System.out.println(ANSI_YELLOW + "1) Wheat" + ANSI_RESET);
+        System.out.println("2) White");
+        System.out.println(ANSI_LIGHT_BROWN + "3) Rye" + ANSI_RESET);
+
+        int breadChoice = getIntInput(ANSI_LIGHT_YELLOW +"Enter your choice:" + ANSI_RESET);
         return switch (breadChoice) {
             case 1 -> "Wheat";
             case 2 -> "White";
@@ -149,16 +227,28 @@ public class Main {
     }
 
     private static void addToppings(Sandwich sandwich, Order order) {
+
+        String ANSI_RESET = "\u001B[0m";
+        String ANSI_YELLOW = "\u001B[33m";
+        String ANSI_GREEN = "\u001B[32m";
+        String ANSI_LIGHT_BLUE = "\u001B[38;5;39m";
+        String ANSI_LIGHT_YELLOW = "\u001B[38;5;226m";
+        String ANSI_LIGHT_ORANGE = "\u001B[38;5;208m";
+        String ANSI_LIGHT_BROWN = "\u001B[38;5;130m";
+        String ANSI_RED = "\u001B[31m";
+        String ANSI_LIGHT_CYAN = "\u001B[38;5;45m";
+
+
         boolean addingToppings = true;
         while (addingToppings) {
-            System.out.println("\nAdd Toppings:");
-            System.out.println("1) Regular Toppings");
-            System.out.println("2) Premium Toppings");
-            System.out.println("3) Sauces");
-            System.out.println("4) Sides");
-            System.out.println("0) Done Adding Toppings");
+            System.out.println(ANSI_GREEN + "\nAdd Toppings:" + ANSI_RESET);
+            System.out.println(ANSI_YELLOW + "1) Regular Toppings" + ANSI_RESET);
+            System.out.println(ANSI_LIGHT_CYAN + "2) Premium Toppings" + ANSI_RESET);
+            System.out.println(ANSI_RED + "3) Sauces" + ANSI_RESET);
+            System.out.println(ANSI_GREEN + "4) Sides" + ANSI_RESET);
+            System.out.println(ANSI_LIGHT_BLUE + "0) Done Adding Toppings" + ANSI_RESET);
 
-            int toppingChoice = getIntInput("Enter your choice:");
+            int toppingChoice = getIntInput(ANSI_LIGHT_ORANGE +"Enter your choice:" + ANSI_RESET);
 
             switch (toppingChoice) {
                 case 1:
