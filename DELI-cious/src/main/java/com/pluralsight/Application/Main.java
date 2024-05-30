@@ -1,4 +1,4 @@
-package com.pluralsight.UI;
+package com.pluralsight.Application;
 
 import com.pluralsight.Models.Chips;
 import com.pluralsight.Models.Drink;
