@@ -123,7 +123,7 @@ public class Order {
 
     public String getOrderDetails() {
         StringBuilder details = new StringBuilder();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd-HH-mm-ss");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
 
         details.append("----------------------------------------------------------------------------------------------------------\n");
         details.append("                                           Sandwich Shop\n");
