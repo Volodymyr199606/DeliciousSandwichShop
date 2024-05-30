@@ -112,6 +112,8 @@ public class Main {
 
     private static Sandwich createSandwich(Order order) {
 
+        int terminalWidth = 220;
+
         String ANSI_RESET = "\u001B[0m";
         String ANSI_YELLOW = "\u001B[33m";
         String ANSI_GREEN = "\u001B[32m";
@@ -120,8 +122,7 @@ public class Main {
         String ANSI_LIGHT_ORANGE = "\u001B[38;5;208m";
         String ANSI_BRONZE = "\u001B[38;5;180m";
 
-
-        System.out.println(ANSI_LIGHT_ORANGE+ "\nSelect Sandwich Type:" + ANSI_RESET);
+        System.out.println(String.format("%" + (terminalWidth + (ANSI_BRONZE + "SANDWICH TYPE SELECTION" + ANSI_RESET).length()) / 2 + "s", ANSI_BRONZE + "SANDWICH TYPE SELECTION" + ANSI_RESET));        System.out.println(ANSI_LIGHT_ORANGE+ "\nSelect Sandwich Type:" + ANSI_RESET);
         System.out.println(ANSI_LIGHT_BLUE + "1) Custom Sandwich" + ANSI_RESET);
         System.out.println(ANSI_LIGHT_YELLOW + "2) BLT" + ANSI_RESET);
         System.out.println(ANSI_YELLOW + "3) Philly Cheese Steak" + ANSI_RESET);
@@ -205,6 +206,9 @@ public class Main {
 
     private static void addToppings(Sandwich sandwich, Order order) {
 
+
+        int terminalWidth = 215;
+
         String ANSI_RESET = "\u001B[0m";
         String ANSI_YELLOW = "\u001B[33m";
         String ANSI_GREEN = "\u001B[32m";
@@ -216,6 +220,9 @@ public class Main {
 
         boolean addingToppings = true;
         while (addingToppings) {
+
+            System.out.println(String.format("%" + (terminalWidth + (ANSI_GREEN + "TOPPINGS SELECTION" + ANSI_RESET).length()) / 2 + "s", ANSI_GREEN + "TOPPINGS SELECTION" + ANSI_RESET));
+            System.out.println();
             System.out.println(ANSI_GREEN + "\nAdd Toppings:" + ANSI_RESET);
             System.out.println(ANSI_YELLOW + "1) Regular Toppings" + ANSI_RESET);
             System.out.println(ANSI_LIGHT_CYAN + "2) Premium Toppings" + ANSI_RESET);
@@ -249,12 +256,18 @@ public class Main {
 
     private static void addSides(Order order) {
 
+
+        int terminalWidth = 215;
+
         String ANSI_RESET = "\u001B[0m";
         String ANSI_LIGHT_ORANGE = "\u001B[38;5;208m";
         String ANSI_YELLOW = "\u001B[33m";
         String ANSI_GREEN = "\u001B[32m";
         String ANSI_RED = "\u001B[31m";
 
+
+        System.out.println(String.format("%" + (terminalWidth + (ANSI_YELLOW + "SIDES TYPE SELECTION" + ANSI_RESET).length()) / 2 + "s", ANSI_YELLOW + "SIDES TYPE SELECTION" + ANSI_RESET));
+        System.out.println();
         System.out.println(ANSI_LIGHT_ORANGE + "\nSelect Side:" + ANSI_RESET);
         System.out.println(ANSI_YELLOW + "1) Au Jus" + ANSI_RESET);
         System.out.println(ANSI_RED + "2) Sauce" + ANSI_RESET);
@@ -279,6 +292,9 @@ public class Main {
 
 
     private static void addSauce(Sandwich sandwich) {
+        int terminalWidth = 215;
+
+
         String ANSI_RESET = "\u001B[0m";
         String ANSI_YELLOW = "\u001B[33m";
         String ANSI_LIGHT_YELLOW = "\u001B[38;5;226m";
@@ -286,8 +302,7 @@ public class Main {
         String ANSI_RED = "\u001B[31m";
         String ANSI_CYAN = "\u001B[36m";
 
-        System.out.println();
-        System.out.println(ANSI_CYAN + "Select Sauce:" + ANSI_RESET);
+        System.out.println(String.format("%" + (terminalWidth + (ANSI_RED + "SAUCES TYPES SELECTION" + ANSI_RESET).length()) / 2 + "s", ANSI_RED + "SAUCES TYPES SELECTION" + ANSI_RESET));        System.out.println(ANSI_CYAN + "Select Sauce:" + ANSI_RESET);
         System.out.println("1) Mayo");
         System.out.println(ANSI_YELLOW + "2) Mustard" + ANSI_RESET);
         System.out.println(ANSI_RED + "3) Ketchup" + ANSI_RESET);
@@ -437,12 +452,14 @@ public class Main {
     }
 
     private static Drink createDrink() {
+        int terminalWidth = 215;
 
         String ANSI_RESET = "\u001B[0m";
         String ANSI_CYAN = "\u001B[36m";
         String ANSI_GREEN = "\u001B[32m";
+        String ANSI_BLUE = "\u001B[34m";
 
-
+        System.out.println(String.format("%" + (terminalWidth + (ANSI_BLUE + "DRINK SIZE SELECTION" + ANSI_RESET).length()) / 2 + "s", ANSI_BLUE + "DRINK SIZE SELECTION" + ANSI_RESET));
         System.out.println(ANSI_GREEN + "\nSelect Drink Size:" + ANSI_RESET);
         System.out.println(ANSI_CYAN + "1) Small ($2.00)" + ANSI_RESET);
         System.out.println(ANSI_CYAN + "2) Medium ($2.50)" + ANSI_RESET);
