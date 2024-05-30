@@ -59,6 +59,8 @@ public class Sandwich extends Product {
         return sauces;
     }
 
+
+
     public boolean isToasted() {
         return toasted;
     }
@@ -70,6 +72,8 @@ public class Sandwich extends Product {
     public Size getSize() {
         return size;
     }
+
+
 
     @Override
     public String getDescription() {

@@ -7,6 +7,8 @@ public class Chips extends Product {
         super("Chips", 1.50);
     }
 
+
+
     @Override
     public String getDescription() {
         return "Bag of chips";

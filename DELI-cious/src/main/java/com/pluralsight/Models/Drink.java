@@ -13,6 +13,7 @@ public class Drink extends Product {
         return size;
     }
 
+
     private static double calculatePrice(String size) {
         switch (size) {
             case "Small":
@@ -34,4 +35,5 @@ public class Drink extends Product {
     public double getPrice() {
         return price;
     }
+
 }
