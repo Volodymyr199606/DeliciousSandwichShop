@@ -55,3 +55,7 @@
 ![Chips](images/Chips.PNG)
 
 🥪
+
+🌶️ Checkout: If the user chooses to checkout, the checkout method is called. This method displays the order summary and attempts to save the order to a file.
+
+![Checkout](images/Checkout.PNG)
