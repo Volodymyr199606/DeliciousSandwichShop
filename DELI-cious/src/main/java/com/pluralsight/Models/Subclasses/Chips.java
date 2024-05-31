@@ -1,8 +1,11 @@
-package com.pluralsight.Models;
+package com.pluralsight.Models.Subclasses;
 
 // Chips.java
 
-public class Chips extends Product {
+import com.pluralsight.Models.AbstractClass.Product;
+
+public class Chips extends Product
+{
     public Chips() {
         super("Chips", 1.50);
     }

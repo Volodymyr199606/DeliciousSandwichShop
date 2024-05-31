@@ -1,7 +1,10 @@
 // BLT.java
 package com.pluralsight.Models;
 
-public class BLT extends Sandwich {
+import com.pluralsight.Models.Subclasses.Sandwich;
+
+public class BLT extends Sandwich
+{
     public BLT() {
         super(new Size(8, 7.00), "White"); // Default size and price for the signature sandwich
         addPremiumTopping(new PremiumTopping("Bacon", false));

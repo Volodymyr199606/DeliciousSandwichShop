@@ -1,9 +1,13 @@
-package com.pluralsight.Models;
+package com.pluralsight.Models.Subclasses;
+
+import com.pluralsight.Models.*;
+import com.pluralsight.Models.AbstractClass.Product;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sandwich extends Product {
+public class Sandwich extends Product
+{
     private Size size;
     private String breadType;
     private List<RegularTopping> regularToppings = new ArrayList<>();

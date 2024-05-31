@@ -1,4 +1,4 @@
-package com.pluralsight.Models;
+package com.pluralsight.Models.AbstractClass;
 
 
 public abstract class Product {

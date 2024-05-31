@@ -1,6 +1,9 @@
 package com.pluralsight.Models;
 
-public class PhillyCheeseSteak extends Sandwich {
+import com.pluralsight.Models.Subclasses.Sandwich;
+
+public class PhillyCheeseSteak extends Sandwich
+{
     public PhillyCheeseSteak() {
         super(new Size(8, 7.00), "White"); // Default size and price for the signature sandwich
         addPremiumTopping(new PremiumTopping("Steak", false));

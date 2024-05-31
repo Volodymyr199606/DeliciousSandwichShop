@@ -1,9 +1,9 @@
 package com.pluralsight.Application;
 
-import com.pluralsight.Models.Chips;
-import com.pluralsight.Models.Drink;
+import com.pluralsight.Models.Subclasses.Chips;
+import com.pluralsight.Models.Subclasses.Drink;
 import com.pluralsight.Models.Order;
-import com.pluralsight.Models.Sandwich;
+import com.pluralsight.Models.Subclasses.Sandwich;
 import com.pluralsight.Service.OrderService;
 import com.pluralsight.Models.Size;
 import com.pluralsight.Models.PremiumTopping;

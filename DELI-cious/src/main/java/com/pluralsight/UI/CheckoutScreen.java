@@ -1,6 +1,7 @@
 package com.pluralsight.UI;
 
 import com.pluralsight.Models.*;
+import com.pluralsight.Models.AbstractClass.Product;
 
 public class CheckoutScreen {
     private Order currentOrder;

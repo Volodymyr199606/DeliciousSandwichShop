@@ -1,6 +1,8 @@
 package com.pluralsight.UI;
 
 import com.pluralsight.Models.*;
+import com.pluralsight.Models.AbstractClass.Product;
+
 import java.util.List;
 
 public class OrderSummary {

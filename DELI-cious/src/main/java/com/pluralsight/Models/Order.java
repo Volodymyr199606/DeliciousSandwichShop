@@ -1,5 +1,10 @@
 package com.pluralsight.Models;
 
+import com.pluralsight.Models.AbstractClass.Product;
+import com.pluralsight.Models.Subclasses.Chips;
+import com.pluralsight.Models.Subclasses.Drink;
+import com.pluralsight.Models.Subclasses.Sandwich;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -43,18 +48,24 @@ public class Order {
 
 
 
-    public List<Product> getProducts() {
-        return products;
-    }
 
 
     public void addProduct(Product product) {
         products.add(product);
     }
 
+
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+
     public void addSide(String side) {
         sides.add(side);
     }
+
+
 
     public List<String> getSides() {
         return sides;
@@ -190,14 +201,14 @@ public class Order {
             for (String side : sides) {
                 details.append(side).append(", ");
             }
-            details.setLength(details.length() - 2); // Remove trailing comma and space
+            details.setLength(details.length() - 2);
             details.append("\n");
         }
 
 
 
         double totalCost = getTotalCost();
-        double californiaTaxRate = 0.0825; // Example: 8.25% CA sales tax rate
+        double californiaTaxRate = 0.0825;
         double tax = totalCost * californiaTaxRate;
         double totalWithTax = totalCost + tax;
 
@@ -221,21 +232,6 @@ public class Order {
         return details.toString();
     }
 
-    public static void main(String[] args) {
-        Order order = new Order();
 
-        BLT blt = new BLT();
-        Chips chips = new Chips();
-
-        order.addProduct(blt);
-        order.addProduct(chips);
-
-
-
-        order.addSide("French Fries");
-        order.addSide("Onion Rings");
-
-        System.out.println(order.getOrderDetails());
-    }
 }
 

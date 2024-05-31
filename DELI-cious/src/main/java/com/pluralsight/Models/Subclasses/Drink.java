@@ -1,7 +1,10 @@
-package com.pluralsight.Models;
+package com.pluralsight.Models.Subclasses;
 // Drink.java
 
-public class Drink extends Product {
+import com.pluralsight.Models.AbstractClass.Product;
+
+public class Drink extends Product
+{
     private String size;
 
     public Drink(String size) {
