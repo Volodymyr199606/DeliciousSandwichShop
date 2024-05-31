@@ -55,6 +55,8 @@ public class Main {
                     createNewOrder();
                     break;
                 } else if (choice == 0) {
+                    System.out.println();
+                    System.out.println("\u001B[32m" + "THANK YOU, PLEASE VISIT US AGAIN" + "\u001B[0m");
                     return;
                 } else {
                     System.out.println("\u001B[31m" + "Invalid choice. Please enter 1 for New Order or 0 for Exit." + "\u001B[0m");                }
