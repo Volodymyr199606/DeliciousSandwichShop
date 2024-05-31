@@ -33,3 +33,15 @@
 ![PremiumCheese](images/PremiumCheese.PNG)
 
 🥪
+
+🌶️ Add Sides: The addSides method allows the user to add sides to their order.
+
+![SidesType](images/SidesType.PNG)
+
+🥪
+
+🌶️ Add Sauce: The addSauce method allows the user to add a sauce to their sandwich.
+
+![Sauces](images/Sauces.PNG)
+
+🥪
