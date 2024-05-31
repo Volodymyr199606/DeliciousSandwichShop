@@ -68,4 +68,4 @@
 
 🥪
 
-## 🌶️ In summary, the Delicious Sandwich Shop point of sales application represents a crucial advancement in the operational efficiency and customer experience at DELI-cious. Through the use of Object-Oriented Programming, we have developed a versatile and user-friendly system that streamlines the order process from start to finish. This application not only addresses the current demands of our growing business but also lays a strong foundation for future enhancements such as online ordering and customer loyalty programs. Thank you for your time and attention. 🌶️
+## ⚡ In summary, the Delicious Sandwich Shop point of sales application represents a crucial advancement in the operational efficiency and customer experience at DELI-cious. Through the use of Object-Oriented Programming, we have developed a versatile and user-friendly system that streamlines the order process from start to finish. This application not only addresses the current demands of our growing business but also lays a strong foundation for future enhancements such as online ordering and customer loyalty programs. Thank you for your time and attention. ⚡
