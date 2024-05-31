@@ -1,12 +1,14 @@
 # DeliciousSandwichShop
 
-### ⚡ The classes Drink, Chips, and Sandwich are subclasses of the Product class.The Product class is an abstract class that represents a general product that can be ordered in the sandwich shop. It has two attributes: name and price.The subclasses Drink, Chips, and Sandwich inherit these attributes from the Product class. This means that each of these subclasses also has a name and a price attribute, and they can use these attributes as if they were defined in the subclasses themselves.⚡
+## Diagram
+
+#### ⚡ The classes Drink, Chips, and Sandwich are subclasses of the Product class.The Product class is an abstract class that represents a general product that can be ordered in the sandwich shop. It has two attributes: name and price.The subclasses Drink, Chips, and Sandwich inherit these attributes from the Product class. This means that each of these subclasses also has a name and a price attribute, and they can use these attributes as if they were defined in the subclasses themselves.⚡
 
 ![Diagrams](images/Diagrams.PNG)
 
 ⚡
 
-### Main class is the entry point of your application. It simulates a sandwich ordering system in a console-based user interface. Here's a brief overview of its main functionalities:
+## Main class is the entry point of your application. It simulates a sandwich ordering system in a console-based user interface. Here's a brief overview of its main functionalities:
 
 🌶️ Main Loop: The main method starts an infinite loop that displays the home screen of the sandwich shop. The user can choose to create a new order or exit the application.
 
