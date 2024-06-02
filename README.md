@@ -4,7 +4,7 @@
 
 #### ⚡ The classes Drink, Chips, and Sandwich are subclasses of the Product class.The Product class is an abstract class that represents a general product that can be ordered in the sandwich shop. It has two attributes: name and price.The subclasses Drink, Chips, and Sandwich inherit these attributes from the Product class. This means that each of these subclasses also has a name and a price attribute, and they can use these attributes as if they were defined in the subclasses themselves.⚡
 
-![Diagrams](images/Diagrams.PNG)
+![Diagram](images/Diagram.PNG)
 
 ⚡
 
